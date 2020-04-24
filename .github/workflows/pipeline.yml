@@ -15,10 +15,10 @@ jobs:
         java-version: 11
     - name: Build with Gradle
 #     run: ./gradlew build
-      run:
-           chmod 777 gradlew
-           pwd
-           ./gradlew build
+      run: |
+        chmod 777 gradlew
+        pwd
+        ./gradlew build
     - name: Publish artifact
       uses: actions/upload-artifact@v1
       with:
