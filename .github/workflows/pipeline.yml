@@ -20,7 +20,7 @@ jobs:
       with:
         name: pal-tracker
         path: build/libs/pal-tracker.jar
-
+#
   deploy:
     needs: build-and-publish
     runs-on: ubuntu-latest
