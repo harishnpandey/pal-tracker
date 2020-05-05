@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-
 public class InMemoryTimeEntryRepository implements TimeEntryRepository {
     // Store entries in a HashMap for onw
     private HashMap<Long, TimeEntry> timeEntries = new HashMap<>();
@@ -28,9 +27,19 @@ public class InMemoryTimeEntryRepository implements TimeEntryRepository {
     }
 
     @Override
-    public TimeEntry find(Long id) {
+    public TimeEntry find(long id) {
         return timeEntries.get(id);
     }
+
+//    @Override
+//    public TimeEntry find(Long id) {
+//        return timeEntries.get(id);
+//    }
+
+//    @Override
+//    public TimeEntry find(Long id) {
+//        return timeEntries.get(id);
+//    }
 
     @Override
     public List<TimeEntry> list() {
@@ -49,6 +58,7 @@ public class InMemoryTimeEntryRepository implements TimeEntryRepository {
 
         timeEntries.replace(id, updatedEntry);
         return updatedEntry;
+//        return null;
     }
 
     @Override
